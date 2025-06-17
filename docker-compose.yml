@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  vaakshakti-backend:
+    build: .
+    ports:
+      - "7777:7777"
+    volumes:
+      - ./Backend:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
